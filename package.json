@@ -6,9 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint src --ext ts,tsx --fix"
   },
   "dependencies": {
+    "@ignite-ui/react": "^2.2.4",
     "@types/node": "22.5.5",
     "@types/react": "18.3.7",
     "@types/react-dom": "18.3.0",
@@ -18,5 +19,9 @@
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "typescript": "5.6.2"
+  },
+  "devDependencies": {
+    "@rocketseat/eslint-config": "^2.2.2",
+    "eslint-plugin-simple-import-sort": "^12.1.1"
   }
 }
