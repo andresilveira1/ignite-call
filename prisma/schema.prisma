@@ -11,6 +11,7 @@ model User {
   id         String   @id @default(uuid())
   username   String   @unique
   name       String
+  bio        String?
   email      String?  @unique
   avatar_url String?
   created_at DateTime @default(now())
@@ -18,6 +19,7 @@ model User {
   accounts      Account[]
   sessions      Session[]
   timeIntervals UserTimeInterval[]
+  Scheduling    Scheduling[]
 
   @@map("users")
 }
@@ -62,4 +64,18 @@ model UserTimeInterval {
   user_id String
 
   @@map("user_time_intervals")
+}
+
+model Scheduling {
+  id           String   @id @default(uuid())
+  name         String
+  email        String
+  observations String?
+  date         DateTime
+  created_at   DateTime @default(now())
+
+  user    User   @relation(fields: [user_id], references: [id])
+  user_id String
+
+  @@map("schedulings")
 }
