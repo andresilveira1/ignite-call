@@ -13,6 +13,7 @@ import { getServerSession } from 'next-auth'
 import { useSession } from 'next-auth/react'
 import { NextSeo } from 'next-seo'
 import { ArrowRight } from 'phosphor-react'
+import React from 'react'
 import { useForm } from 'react-hook-form'
 import * as zod from 'zod'
 

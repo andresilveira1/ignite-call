@@ -1,6 +1,7 @@
 import { Heading, Text } from '@ignite-ui/react'
 import Image from 'next/image'
 import { NextSeo } from 'next-seo'
+import React from 'react'
 
 import previewImage from '../../assets/app-preview.png'
 import { ClaimUsernameForm } from './components/claim-username-form'

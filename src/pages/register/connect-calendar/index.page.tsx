@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import { signIn, useSession } from 'next-auth/react'
 import { NextSeo } from 'next-seo'
 import { ArrowRight, Check } from 'phosphor-react'
+import React from 'react'
 
 import { Container, Header } from '../styles'
 import { AuthError, ConnectBox, ConnectItem } from './styles'

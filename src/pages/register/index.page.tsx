@@ -4,7 +4,7 @@ import { AxiosError } from 'axios'
 import { useRouter } from 'next/router'
 import { NextSeo } from 'next-seo'
 import { ArrowRight } from 'phosphor-react'
-import { useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { useForm } from 'react-hook-form'
 import * as zod from 'zod'
 
@@ -79,9 +79,6 @@ export default function Register() {
           <label>
             <Text size="sm">Nome de usuário</Text>
             <TextInput
-              onPointerEnterCapture=""
-              onPointerLeaveCapture=""
-              crossOrigin=""
               prefix="ignite.com/"
               placeholder="seu usuário"
               {...register('username')}
@@ -94,13 +91,7 @@ export default function Register() {
 
           <label>
             <Text size="sm">Nome completo</Text>
-            <TextInput
-              onPointerEnterCapture=""
-              onPointerLeaveCapture=""
-              crossOrigin=""
-              placeholder="Seu nome"
-              {...register('name')}
-            />
+            <TextInput placeholder="Seu nome" {...register('name')} />
 
             {errors.name && (
               <FormError size="sm">{errors.name.message}</FormError>

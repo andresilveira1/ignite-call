@@ -2,6 +2,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { Button, Text, TextInput } from '@ignite-ui/react'
 import { useRouter } from 'next/router'
 import { ArrowRight } from 'phosphor-react'
+import React from 'react'
 import { useForm } from 'react-hook-form'
 import * as zod from 'zod'
 
