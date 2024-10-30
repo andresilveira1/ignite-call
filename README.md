@@ -34,8 +34,27 @@
 
 ## Run
 
-```http
+<p>To run this application some environment variable is needed. </p>
+
+[Google OAuth](https://developers.google.com/identity/protocols/oauth2)
+
+- [ ] AUTH_GOOGLE_ID
+- [ ] AUTH_GOOGLE_SECRET
+
+[Next Auth Secret](https://next-auth.js.org/configuration/options#nextauth_secret)
+
+- [ ] NEXTAUTH_SECRET
+
+```bash
 git clone https://github.com/andresilveira1/ignite-call.git
 
 npm install
+```
+
+```bash
+  docker run --name postgres -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres
+  
+  docker start
+
+  npx prisma migrate dev
 ```
